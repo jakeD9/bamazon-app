@@ -68,8 +68,9 @@ function placeOrder() {
             if (amount > results[chosenID].quantity) {
                 console.log("Checking quantity remaining of " + results[chosenID].item_name + "...");
                 console.log("Looks like there's not enough left to complete your order!")
+                continueApp();
                 } 
-                else { 
+                else {
                     connection.query("UPDATE products SET ? WHERE ?", 
                     [{
                         quantity: results[chosenID].quantity - amount
@@ -79,10 +80,30 @@ function placeOrder() {
                     }],
                     function(err) {
                         if (err) throw err;
-                        console.log("Item purchased!")
-                        // startApp();
+                        console.log("Item purchased!");
+                        console.log("Total spent: $" + (results[chosenID].price * results[chosenID].quantity));
+                        continueApp();
                     })
-                }        
+                }
         })
     })
+}
+
+function continueApp() {
+    inquirer
+        .prompt(
+            {
+                name: "choice",
+                type: "rawlist",
+                choices: ["PURCHASE", "QUIT"],
+                message: "Would you like to purchase another item?"
+            }
+        ).then(function(answer) {
+            console.log(answer);
+            if (answer.choice === 'PURCHASE') {
+                startApp();
+            } else {
+                connection.end();
+            }
+        })
 }

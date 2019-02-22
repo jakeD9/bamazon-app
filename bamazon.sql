@@ -4,7 +4,7 @@ USE bamazonDB;
 
 CREATE TABLE products(
     -- add auto_increment to next line, VScode syntax is off on sql files for some reason
-	item_id INTEGER(10) NOT NULL, 
+	item_id INTEGER(10) NOT NULL AUTO_INCREMENT, 
     product_name VARCHAR(30) NOT NULL,
     department_name VARCHAR(30) NOT NULL,
     price INTEGER(10) NOT NULL,
