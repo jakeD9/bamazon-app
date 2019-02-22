@@ -1,0 +1,23 @@
+{
+  "name": "bamazon-app",
+  "version": "1.0.0",
+  "description": "amazon-esque shopping app using inquirer and mysql",
+  "main": "customer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakeD9/bamazon-app.git"
+  },
+  "author": "jake d",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakeD9/bamazon-app/issues"
+  },
+  "homepage": "https://github.com/jakeD9/bamazon-app#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2",
+    "mysql": "^2.16.0"
+  }
+}
