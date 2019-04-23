@@ -8,12 +8,17 @@ Simply navigate to the repository location on your machine and run customer.js u
 
 ### Prerequisites
 
-  *nodeJs 
+  *nodeJs
+
+
   *mySQL 
 
 node package modules used:
 
-  *mysql 
+
+  *mysql
+
+
   *inquirer 
 
 ### Installing
