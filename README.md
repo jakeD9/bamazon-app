@@ -8,14 +8,12 @@ Simply navigate to the repository location on your machine and run customer.js u
 
 ### Prerequisites
 
-NodeJS
-mySQL
+*nodeJs
+*mySQL
 
-npm modules used:
-mysql
-inquirer
-
-```
+node package modules used:
+*mysql
+*inquirer
 
 ### Installing
 
@@ -49,11 +47,6 @@ var connection = mysql.createConnection({
 
 Since this is just a CLI app, just run customer.js in your node terminal. The data is persistent, and if you want to manually update it (make sure some items are in stock! ;) ) you will have to go into mySQL manually to do this. 
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Versioning
 
